@@ -282,7 +282,6 @@ let g:pymode_lint=1
 let g:pymode_lint_write=1
 let g:pymode_lint_on_fly=1
 let g:pymode_lint_message=1
-
 let g:pymode_lint_checker=["pyflakes","pep8","mccabe"]
 let g:pymode_virtualenv=1
 let g:pymode_breakpoint=1
@@ -293,7 +292,7 @@ let g:pymode_syntax_all=1
 let g:pymode_syntax_indent_errors=g:pymode_syntax_all
 let g:pymode_syntax_space_errors=g:pymode_syntax_all
 let g:pymode_folding=1
-let g:pymode_python = 'python3'
+let g:pymode_python='python3'
 
 " NERD Tree Settings
 autocmd vimenter * NERDTree
