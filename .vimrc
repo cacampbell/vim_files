@@ -123,17 +123,16 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 
 " Colors
-let g:solarized_termcolors=256
 let g:solarized_termtrans=0
 let g:solarized_degrade=0
 let g:solarized_bold=1
 let g:solarized_underline=1
 let g:solarized_italic=1
-set t_Co=256
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+set background=light
 colorscheme solarized
-colors solarized
 
 "}}}
 
@@ -145,20 +144,6 @@ function! Browser ()
    let line = getline (".")
    let line = matchstr (line, "http[^   ]*")
    exec "!konqueror ".line
-endfunction
-
-"}}}
-
-"{{{ Todo  List Mode
-
-function! TodoListMode()
-   e ~/.todo.otl
-   Calendar
-   wincmd l
-   set foldlevel=1
-   tabnew ~/.notes.txt
-   tabfirst
-   " or 'norm! zMzr'
 endfunction
 
 "}}}

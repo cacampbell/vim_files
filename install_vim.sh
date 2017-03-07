@@ -12,9 +12,8 @@ sudo ./configure \
     --enable-luainterp \
     --with-lua-prefix=/usr \
     --enable-rubyinterp \
-    --with-python3 \
     --enable-python3interp \
-    --with-python-config-dir=/usr/lib/python3.4/config \
+    --with-python-config-dir=/usr/lib/python3.5-config \
     --enable-perlinterp \
     --enable-gui=gtk2 \
     --enable-gtk2-check \
@@ -22,13 +21,8 @@ sudo ./configure \
     --enable-fail-if-missing \
     --enable-cscope \
     --prefix=/usr/local \
-&& sudo make VIMRUNTIMEDIR=/usr/local/share/vim/vim74 \
-&& sudo checkinstall \
-&& sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/vim 1 \
-&& sudo update-alternatives --set editor /usr/local/bin/vim \
-&& sudo update-alternatives --install /usr/bin/vi vi /usr/local/bin/vim 1 \
-&& sudo update-alternatives --set vi /usr/local/bin/vim
-
-cd ..
+&& sudo checkinstall
 
 vim --version
+
+cd ..
