@@ -17,13 +17,13 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'easymotion/vim-easymotion'
 Bundle 'klen/python-mode'
 Plugin 'scrooloose/syntastic'
-Plugin 'SirVer/ultisnips'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-perl/vim-perl'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'SpaceVim/SpaceVim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -223,7 +223,7 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+" Delete trailing white space on save. Python, YAML
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
@@ -254,9 +254,6 @@ nnoremap : ;
 
 " neocomplete
 let g:neocomplete#enable_at_startup=1
-
-
-
 let g:rct_completion_use_fri = 1
 let g:Tex_ViewRule_pdf = "kpdf"
 
@@ -277,7 +274,7 @@ let g:pymode_syntax_all=1
 let g:pymode_syntax_indent_errors=g:pymode_syntax_all
 let g:pymode_syntax_space_errors=g:pymode_syntax_all
 let g:pymode_folding=1
-let g:pymode_python='python3'
+let g:pymode_python='py3'
 
 " NERD Tree Settings
 autocmd vimenter * NERDTree
