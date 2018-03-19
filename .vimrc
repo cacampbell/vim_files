@@ -24,6 +24,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'SpaceVim/SpaceVim'
+Plugin 'severin-lemaignan/vim-minimap'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -259,11 +260,11 @@ let g:Tex_ViewRule_pdf = "kpdf"
 
 " Python Mode
 let g:pymode_doc=1
-let g:pymode_doc_key='K'
+let g:pymode_doc_key='?'
 let g:pymode_lint=1
 let g:pymode_lint_write=1
 let g:pymode_lint_on_fly=1
-let g:pymode_lint_message=1
+let g:pymode_lint_message=0
 let g:pymode_lint_checker=["pyflakes","pep8","mccabe"]
 let g:pymode_virtualenv=1
 let g:pymode_breakpoint=1
@@ -274,7 +275,7 @@ let g:pymode_syntax_all=1
 let g:pymode_syntax_indent_errors=g:pymode_syntax_all
 let g:pymode_syntax_space_errors=g:pymode_syntax_all
 let g:pymode_folding=1
-let g:pymode_python='py3'
+let g:pymode_python='python3'
 
 " NERD Tree Settings
 autocmd vimenter * NERDTree
