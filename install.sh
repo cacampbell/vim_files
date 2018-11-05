@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/tmp
+
 sudo apt install \
     libncurses5-dev \
     libgnome2-dev \
@@ -30,14 +33,14 @@ cd vim
     --enable-multibyte \
     --enable-rubyinterp \
     --enable-python3interp \
-    --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/ \
+    --with-python3-config-dir=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/\
     --enable-perlinterp \
     --enable-luainterp \
     --enable-gui=gtk2 \
     --enable-cscope \
     --prefix=/usr/local
 
-make VIMRUNTIMEDIR=/lusr/local/share/vim/vim80
+make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
 sudo make install
 
 sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/vim 1

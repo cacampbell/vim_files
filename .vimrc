@@ -1,21 +1,18 @@
 "{{{ Vundle Stuff
-
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
+filetype off
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'osyo-manga/vim-marching'
 Plugin 'bling/vim-airline'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'easymotion/vim-easymotion'
-Bundle 'klen/python-mode'
+Plugin 'python-mode/python-mode'
 Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-perl/vim-perl'
@@ -23,8 +20,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'SpaceVim/SpaceVim'
 Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'jalvesaq/Nvim-R'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,9 +52,6 @@ let java_allow_cpp_keywords=1
 
 " Automatically cd into the directory that the file is in
 autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
-
-" Remove any trailing whitespace that is in the file
-autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
 " Restore cursor position to where it was before
 augroup JumpCursorOnEdit
