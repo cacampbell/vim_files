@@ -49,8 +49,8 @@ sudo update-alternatives --install /usr/bin/vim vim /usr/local/bin/vim 1
 sudo update-alternatives --set vim /usr/local/bin/vim
 
 cd ..
-cp ~/.vimrc ~/.vimrc.bak
 cp .vimrc ~/.vimrc
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim +PluginInstall
 vim +Version

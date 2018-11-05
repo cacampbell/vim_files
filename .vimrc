@@ -95,7 +95,6 @@ set expandtab
 set smarttab
 set shiftwidth=4
 set softtabstop=4
-compiler gcc
 set wildmenu
 set wildmode=list:longest,full
 set mouse=a
