@@ -40,7 +40,7 @@ cd vim
     --enable-cscope \
     --prefix=/usr/local
 
-make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
+make VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 sudo make install
 
 sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/vim 1

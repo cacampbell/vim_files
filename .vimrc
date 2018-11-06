@@ -127,6 +127,10 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 set background=light
 colorscheme solarized
+let &t_SI = "\<Esc>]12;orange\x7"
+let &t_EI = "\<Esc>]12;red\x7"
+silent !echo -ne "\033]12;red\007"
+autocmd VimLeave * silent !echo -ne "\033]12;gray\007"
 
 "}}}
 
@@ -161,7 +165,7 @@ endfunc
 
 "}}}
 
- "{{{ Mappings
+"{{{ Mappings
 
 " Next Tab
 nnoremap <silent> <C-Right> :tabnext<CR>
