@@ -23,6 +23,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'jalvesaq/Nvim-R'
 Plugin 'ElmCast/elm-vim'
+Plugin 'posva/vim-vue'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
